@@ -168,7 +168,7 @@ function minimax(board, depth, isMaximizingPlayer) {
 ### 2.3.3 Exemplo Prático
 
 De forma A entender tudo isto de uma Maneira mais vizual deixo aqui um video de toda a explicação do Funcionamento do Algoritmo MinMax bem como o Funcionamento da Árvore de Decisão do mesmo
-https://www.youtube.com/watch?v=KU9Ch59-4vw&t=9s
+[VIDEO](https://www.youtube.com/watch?v=KU9Ch59-4vw&t=9s)
 
 
 
@@ -275,7 +275,7 @@ function getBestMoveAlphaBeta() {
 ### Exemplo Prático
 
 Novamente de forma a entender tudo isto de uma Maneira mais vizual deixo aqui uma video do funcionamento do método Alfa-Beta 
-https://www.youtube.com/watch?v=9D1hVGumxCo&t=14s
+[VIDEO](https://www.youtube.com/watch?v=9D1hVGumxCo&t=14s)
 
 
 ## 2.5 Algoritmo Monte Carlo (EXTRA)
@@ -350,7 +350,7 @@ function monteCarloMove(simulations = 100) {
 
 Novamente de forma a entender tudo isto de uma Maneira mais vizual deixo aqui uma video do funcionamento do método Monte Carlo 
 
-https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
+[VIDEO](https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s)
 
 
 # 3 TESTES ESTUDO DE TEMPOS E MEMORIA
