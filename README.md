@@ -131,12 +131,14 @@ Com base Nestes dois a complexidade temporal e espacial do algoritmo é dada por
 
 Apesar de ser eficiente em jogos simples como o Tic Tac Toe, o algoritmo Minimax torna-se rapidamente computacionalmente inviável em jogos com árvores de decisão muito grandes devido ao facto de necessitar de explorar a Arvore de Decisão na sua Totalidade. Por isso, nesses Casos é comum utilizar outros Algorimos como os que iremos Ver a Seguir ( Alfa-Beta ), que permitem eliminar ramos da árvore que não influenciam a decisão final, reduzindo o tempo de execução sem comprometer a exatidão do resultado.
 
+## 2.3.3 Codigo
 
 
-
-## Exemplo Prático
+## 2.3.3 Exemplo Prático
 
 De forma A entender tudo isto de uma Maneira mais vizual deixo aqui um video de toda a explicação do Funcionamento do Algoritmo MinMax bem como o Funcionamento da Árvore de Decisão do mesmo
+https://www.youtube.com/watch?v=KU9Ch59-4vw&t=9s
+
 
 
 
