@@ -362,7 +362,11 @@ https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
 | <span style="color:red">**JOGADA1**</span>  | 10.90ms          | 10.90ms          | 9.54MB             | 9.54MB             |
 | <span style="color:green">**JOGADA2**</span> | 0.10ms           | 11.00ms          | 9.54MB             | 19.07MB            |
 | <span style="color:blue">**JOGADA3**</span> | 0.00ms           | 11.00ms          | 9.54MB             | 28.61MB            |
-| <span style="color:red">**JOGADA4**</span> | 0.00ms           | 11.00ms  
+| <span style="color:red">**JOGADA4**</span> | 0.00ms           | 11.00ms           | 9.54MB             | 28.61MB            |
+
+
+
+
 
 ## 3.2 Jogo-Teste (ALFA BETA)
 
