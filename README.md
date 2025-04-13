@@ -383,9 +383,22 @@ https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
 | <span style="color:red">**JOGADA4**</span> | --------       | 5.50ms       | ----------      | 28.61MB        |
 
 
+# ANALISE DOS RESULTADOS 
+
+## Estudo de Tempos de Execução (Base nos Dados Obtidos)
+
+Após analisarmos os tempos de execução obtidos, notámos diferenças bastante claras entre os três algoritmos implementados.
+
+O algoritmo **MINMAX** revelou-se o **menos eficiente em termos de tempo**, com a **primeira jogada a demorar 10.90ms**, o que resultou num **tempo total de 11.00ms**. Este comportamento já era esperado, pois o MINMAX avalia todas as possibilidades do jogo logo de início, o que faz com que a **primeira jogada demore muito mais tempo**. Ou seja, gasta-se mais tempo a pensar antes de jogar pela primeira vez.
+
+Por outro lado, o algoritmo **ALFA-BETA** mostrou um desempenho muito melhor. O **tempo total foi apenas de 1.20ms**, sendo que a **primeira jogada demorou 1.10ms**. Esta melhoria deve-se à técnica de **poda alfa-beta**, que basicamente ignora os ramos da árvore que não têm impacto na decisão final, poupando tempo e esforço computacional.
+
+O algoritmo **MONTE CARLO** ficou a meio termo. A **primeira jogada demorou 3.80ms** e o **tempo total foi de 5.50ms**. Isto é aceitável, já que este método funciona com simulações aleatórias — neste caso, foram feitas **100 simulações** por jogada. Este tipo de algoritmo é mais variável: o seu desempenho pode melhorar ou piorar dependendo do número de simulações que forem feitas. Por isso, é **muito dependente da situação específica** e do tempo que se pode gastar a pensar.
+
+No geral, o **ALFA-BETA foi o mais rápido**, aconcluido assim que este é o **mais recomendado para o jogo do Galo**,entre outros jogos onde é necessario haver uma resposta rápida e comqualidade na decisão.
 
 
-## NotasEstudo daMemória
+## Estudo da Memória com (Base nos Dados)
 
 Nestaavaliação, o estudo da memória foi realizado de forma geral, considerando o tempo de processamento total da jogada do computador, e não especificamente associado a cada método de pesquisa utilizado. No entanto, é fácil perceber que há diferenças relevantes entre os algoritmos. O Minimax tende a utilizar mais memória, pois constrói e percorre toda a árvore de possibilidades até ao final do jogo, mantendo em memória múltiplos estados. Já o Alpha-Beta, embora baseado na mesma estrutura, reduz o uso de memóriaao eliminar ramos desnecessários, guardando apenas os caminhos relevantes.
 
