@@ -1,3 +1,4 @@
+'''
 
 # 1. INTRODUÇÃO
 
@@ -133,6 +134,46 @@ Apesar de ser eficiente em jogos simples como o Tic Tac Toe, o algoritmo Minimax
 
 ## 2.3.3 Codigo
 
+```javascript
+function minimax(board, depth, isMaximizingPlayer) {
+  const scores = {
+    "X": -10, // Pontuação para vitória do jogador X.
+    "O": 10,  // Pontuação para vitória do computador (O).
+    "tie": 0  // Pontuação para empate.
+  };
+
+  const winner = getWinner(board); // Verifica se há um vencedor na configuração atual.
+  if (winner) {
+    return scores[winner]; // Retorna a pontuação com base no vencedor.
+  }
+
+  if (board.every(cell => cell !== "")) { // Se o tabuleiro está cheio (empate).
+    return scores["tie"];
+  }
+
+  if (isMaximizingPlayer) {
+    let best = -Infinity;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = "O"; // Tenta a jogada do computador.
+        best = Math.max(best, minimax(board, depth + 1, false)); // Avalia a jogada recursivamente.
+        board[i] = ""; // Desfaz a jogada para restaurar o estado.
+      }
+    }
+    return best;
+  } else {
+    let best = Infinity;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = "X"; // Tenta a jogada do jogador.
+        best = Math.min(best, minimax(board, depth + 1, true)); // Avalia recursivamente.
+        board[i] = ""; // Desfaz a jogada.
+      }
+    }
+    return best;
+  }
+}
+```
 
 ## 2.3.3 Exemplo Prático
 
