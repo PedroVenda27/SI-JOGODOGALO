@@ -1,7 +1,7 @@
 
 # 1. INTRODUÇÃO
 
-Nos últimos anos, a Inteligência Artificial (IA) tem se tornado cada vez mais presente em diversas áreas, desde assistentes virtuais até sistemas complexos de automação e otimização. Ossão projetados para tomar decisões e resolver problemas de forma autônoma, muitas vezes simulando o pensamento humano.
+Nos últimos anos, a Inteligência Artificial (IA) tem se tornado cada vez mais presente em diversas áreas, desde assistentes virtuais até sistemas complexos de automação e otimização. Os Sistemas Inteligentes são projetados para tomar decisões e resolver problemas de forma autônoma, muitas vezes simulando o pensamento humano.
 
 Neste relatório, vamos explorar os conceitos fundamentais de IA e Sistemas Inteligentes, utilizando como exemplo o Jogo do Galo/Tic Tac Toe este é tido com um problema clássico da área de pesquisa em IA, onde um agente deve encontrar a melhor jogada possivel de modo a vencer o jogo.
 
@@ -12,44 +12,39 @@ Ao longo do relatório, discutiremos temas como Conceitos Base da Area Algoritmo
 
 ### 1.1.1 O que é um Agente e como Funciona?
 
-Chamamos comouma entidade capaz de perceber o ambiente em que se encontra dentro de um determinado problema informático e agir com base nas informações recebidas.
+Chamamos como agente uma entidade capaz de perceber o ambiente em que se encontra dentro de um determinado problema informático e agir com base nas informações recebidas.
 
 O seu funcionamento é orientado por uma Agent Function, uma função responsável por mapear as percepções do agente em ações específicas, definindo como ele deve reagir a diferentes situações do ambiente.
 
 Essa função pode ser implementada como um programa de computador, permitindo que o agente processe dados automaticamente e tome decisões de forma autônoma para alcançar um determinado objetivo.
 
+
 ### 1.1.2 Processo de Resolução de um Problema por um Agente
 
-Para resolver um problema, umsegue um processo estruturado em:
+Para resolver um problema, um agente inteligente segue um processo estruturado em quatro fases principais:
 
-- O primeiro passo é definir claramente o objetivo que se pretende alcançar. Para isso, é necessário estabelecer quais regras e açoes podem ser tomadas para atingir esse objetivo.
-
-- De seguida o agente cria uma descrição do problema, identificando os estados do Problema e defenindo as ações que podem ser realizadas de modo a definir os caminhos viáveis para atingir a solução.
-
-- : Após isso o agente simula difrentes sequência de ações utlizando metodos de pesquiza em um modelo interno até encontrar um caminho que leve ao objetivo (Solução)
-
-Se o agente não encontrar nenhuma solução possível, ele conclui que o problema não tem resposta viável.
-
-- Por fim ao encontrar uma solução, o agente, aplicando-as ao problema para atingir o objetivo.
+•	Objetivo: O primeiro passo é definir claramente o objetivo que se pretende alcançar. Para isso, é necessário estabelecer quais regras e açoes podem ser tomadas para atingir esse objetivo.
+•	Formulação do Problema:  De seguida o agente cria uma descrição do problema, identificando os estados do Problema e defenindo as ações que podem ser realizadas de modo a definir os caminhos viáveis para atingir a solução.
+•	Pesquisa: Após isso o agente simula difrentes sequência de ações utlizando metodos de pesquiza em um modelo interno até encontrar um caminho que leve ao objetivo (Solução)
+ Se o agente não encontrar nenhuma solução possível, ele conclui que o problema não tem resposta viável. 
+•	Execução: Por fim ao encontrar uma solução, o agente executa as ações planejadas, aplicando-as ao problema para atingir o objetivo.
 
 
 ### 1.1.3 Estrutura de um Problema de Pesquisa
 
 Os problemas de pesquisa podem ser estruturados com base nos seguintes elementos fundamentais:
 
-- : Conjunto de todos os estados possíveis do problema.
+•	Espaço de estados: Conjunto de todos os estados possíveis do problema.
+•	Estado inicial: O Ponto de partida do Problema 
+•	Estado final: O Estado representante da Solução do problema. (Neste caso Jogo do Galo) existem varios estados Possiveis
+•	Função de ação: Defenição das ações disponíveis para cada estado. 
+•	Modelo de transição: Define o efeito de cada ação, ou seja, como a aplicação de uma ação em um estado altera a situação atual. 
+•	Função de custo: Custo de realizar uma transição de um estado para outro. Exemplo Tempo Gasto ou Memoria Utilizada
 
-- : O Ponto de partida do Problema
+Estes Elementos e Conceitos formam a base para a implementação de Algoritmos de Pesquisa, utilizados por um agente para  encontrar a melhor solução para um problema.
 
-- : O Estado representante da Solução do problema. (Neste caso Jogo do Galo) existem varios estados Possiveis
+NOTA: Esta Parte do Relatório é Bastante Semelhante a do Relatorio Anterior uma vez que se tratam de Conceitos Basicos e Introdutórios da Disciplina
 
-- : Defenição das ações disponíveis para cada estado.
-
-- : Define o efeito de cada ação, ou seja, como a aplicação de uma ação em um estado altera a situação atual.
-
-- : Custo de realizar uma transição de um estado para outro. Exemplo Tempo Gasto ou Memoria Utilizada
-
-Estes Elementos e Conceitos formam a base para a implementação de, utilizados por um agente para encontrar a melhor solução para um problema.
 
 
 # 2 PROJETO DE ESTUDO / PROBLEMA
