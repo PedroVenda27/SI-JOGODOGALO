@@ -360,7 +360,7 @@ https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
 ALFA BETA (Melhor das hipoteses Empate)
 MIN MAX (Melhor das hipoteses Empate)
 Alfa e Beta devem Realizar os dois a mesma jogada u ma vez que realiuzam a melhor jogada
-MONTE CARLO (MPossivel Vitoria)
+MONTE CARLO (Possivel Vitoria uma vez que é um Algoritmo Estatistico)
 
 ## 3.2 Jogo-Teste2 (MINMAX)
 
@@ -420,15 +420,35 @@ MONTE CARLO (MPossivel Vitoria)
 |----------|---------------|--------------|----------------|----------------|
 | <span style="color:red">**JOGADA1**</span> | 3.80ms        | 3.80ms       | 9.54MB         | 9.54MB         |
 | <span style="color:green">**JOGADA2**</span> | 0.90ms        | 4.70ms       | 9.54MB         | 19.07MB        |
-| <span style="color:blue">**JOGADA3**</span> | 0.80ms        | 5.50ms       | 9.54MB         | 28.61MB        |
-| <span style="color:red">**JOGADA4**</span> | --------       | 5.50ms       | ----------      | 28.61MB        |
+| <span style="color:blue">**JOGADA3**</span> | 0.80ms        | 3.70ms       | 9.54MB         | 28.61MB        |
+| <span style="color:red">**JOGADA4**</span> | --------       | 3.70ms       | ----------      | 28.61MB        |
+
+
+
+### Jogada 1
+[Jogada 1](https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MONTECARLO_T1_JOG1.png?raw=true)
+
+### Jogada 2
+[Jogada 2](https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MONTECARLO_T1_JOG2.png?raw=true)
+
+### Jogada 3
+[Jogada 3](https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MONTECARLO_T1_JOG3.png?raw=true)
+
+### Estado Final
+[Estado Final](https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MONTECARLO_T1_FINAL.png?raw=true)
+
 
 
 # ANALISE DOS RESULTADOS E RESULTADOS ESPERADOS CONFIRMAÇOES
 
 MINMAX (Melhor das hipoteses Empate, impossivel ganhar) ✅ Confirmado!
+
 ALFA BETA (Melhor das hipoteses Empate, impossivel ganhar) ✅ Confirmado!
-ALFA-BETA e MINMAX devem Realizar os dois a mesma jogada uma vez que realiuzam a melhor jogada ✅ Confirmado! a
+
+ALFA-BETA e MINMAX (devem Realizar os dois a mesma jogada uma vez que realizam a melhor jogada) ✅ Confirmado! 
+
+MONTE CARLO (Possivel Vitoria uma vez que é um Algoritmo Estatistico) ✅ Confirmado!
+
 
 
 
