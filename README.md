@@ -18,7 +18,7 @@ O seu funcionamento é orientado por uma Agent Function, uma função responsáv
 
 Essa função pode ser implementada como um programa de computador, permitindo que o agente processe dados automaticamente e tome decisões de forma autônoma para alcançar um determinado objetivo.
 
-## Processo de Resolução de um Problema por um Agente
+### 1.1.2 Processo de Resolução de um Problema por um Agente
 
 Para resolver um problema, umsegue um processo estruturado em:
 
@@ -33,7 +33,7 @@ Se o agente não encontrar nenhuma solução possível, ele conclui que o proble
 - Por fim ao encontrar uma solução, o agente, aplicando-as ao problema para atingir o objetivo.
 
 
-### Estrutura de um Problema de Pesquisa
+### 1.1.3 Estrutura de um Problema de Pesquisa
 
 Os problemas de pesquisa podem ser estruturados com base nos seguintes elementos fundamentais:
 
@@ -52,11 +52,11 @@ Os problemas de pesquisa podem ser estruturados com base nos seguintes elementos
 Estes Elementos e Conceitos formam a base para a implementação de, utilizados por um agente para encontrar a melhor solução para um problema.
 
 
-## PROJETO DE ESTUDO / PROBLEMA
+# 2 PROJETO DE ESTUDO / PROBLEMA
 
-## Jogo do Galo Tic-Tac-Toe
+## 2.1 Jogo do Galo Tic-Tac-Toe
 
-## O que é e em Consiste
+### 2.1.1 O que é e em Consiste
 
 O, também conhecido como, é um jogoclássico que consiste num tabuleiro 3x3, onde dois jogadores alternam jogadas para preencher as casas com os símbolos "X" e "O". O objetivo é formar uma linha com três símbolos iguais na horizontal, vertical ou diagonal antes do adversário.
 
