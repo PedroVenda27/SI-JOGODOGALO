@@ -418,9 +418,9 @@ MONTE CARLO (Possivel Vitoria uma vez que é um Algoritmo Estatistico)
 
 | JOGADA   | Tempo JOGADA | Tempo TOTAL | Memoria JOGADA | Memoria TOTAL |
 |----------|---------------|--------------|----------------|----------------|
-| <span style="color:red">**JOGADA1**</span> | 3.80ms        | 3.80ms       | 9.54MB         | 9.54MB         |
-| <span style="color:green">**JOGADA2**</span> | 0.90ms        | 4.70ms       | 9.54MB         | 19.07MB        |
-| <span style="color:blue">**JOGADA3**</span> | 0.80ms        | 3.70ms       | 9.54MB         | 28.61MB        |
+| <span style="color:red">**JOGADA1**</span> | 2.60/2.70ms        | 2.70ms       | 9.54MB         | 9.54MB         |
+| <span style="color:green">**JOGADA2**</span> | 0.60ms        | 3.30ms       | 9.54MB         | 19.07MB        |
+| <span style="color:blue">**JOGADA3**</span> | 0.30/0.40ms        | 3.70ms       | 9.54MB         | 28.61MB        |
 | <span style="color:red">**JOGADA4**</span> | --------       | 3.70ms       | ----------      | 28.61MB        |
 
 
@@ -467,7 +467,11 @@ No geral, o **ALFA-BETA foi o mais rápido**, aconcluido assim que este é o **m
 
 ## Estudo da Memória com (Base nos Dados)
 
-Nestaavaliação, o estudo da memória foi realizado de forma geral, considerando o tempo de processamento total da jogada do computador, e não especificamente associado a cada método de pesquisa utilizado. No entanto, é fácil perceber que há diferenças relevantes entre os algoritmos. O Minimax tende a utilizar mais memória, pois constrói e percorre toda a árvore de possibilidades até ao final do jogo, mantendo em memória múltiplos estados. Já o Alpha-Beta, embora baseado na mesma estrutura, reduz o uso de memóriaao eliminar ramos desnecessários, guardando apenas os caminhos relevantes.
+Nesta avaliação, o estudo da memória foi realizado de forma geral, considerando a memoriageral de processamento total da jogada do computador, e não especificamente associado a cada método de pesquisa utilizado.
+
+No entanto, é fácil perceber que há diferenças relevantes entre os algoritmos. 
+O Minimax tende a utilizar mais memória, pois constrói e percorre toda a árvore, mantendo em memória múltiplos toda a informaçao dos nos.  Maior Numero de Nós Maior= Memoria
+Já o Alpha-Beta, embora baseado na mesma estrutura, reduz o uso de memóriaao eliminar ramos atravez do processo de poda o que elimina nós desnecessários, guardando apenas os caminhos relevantes. Menor Numero de Nós = Maior Memoria
 
 No caso do Monte Carlo, o consumo de memória depende diretamente do número de simulações realizadas, uma vez que cada simulação requer uma cópia do estado atual do tabuleiro e gera novos estados aleatórios até ao fim do jogo. Assim, embora a medição de memória aplicada seja útil para uma comparação geral, ela não reflete isoladamente o impacto de cada algoritmo, mas sim o total de recursos utilizados durante a execução da jogada.
 
