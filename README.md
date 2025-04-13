@@ -1,5 +1,5 @@
 
-## 1. INTRODUÇÃO
+# 1. INTRODUÇÃO
 
 Nos últimos anos, a Inteligência Artificial (IA) tem se tornado cada vez mais presente em diversas áreas, desde assistentes virtuais até sistemas complexos de automação e otimização. Ossão projetados para tomar decisões e resolver problemas de forma autônoma, muitas vezes simulando o pensamento humano.
 
@@ -8,10 +8,9 @@ Neste relatório, vamos explorar os conceitos fundamentais de IA e Sistemas Inte
 Ao longo do relatório, discutiremos temas como Conceitos Base da Area Algoritmos de Busca e estratégias de solução podem ser aplicados ao Jogo do Galo, ilustrando o funcionamento de técnicas fundamentais da IA. Além disso, analisaremos os desafios e a eficiência de diferentes abordagens para encontrar a solução ideal.
 
 
+## 1.1 Conceitos Base
 
-### 1.1 Conceitos Base
-
-#### 1.1.1 O que é um Agente e como Funciona?
+### 1.1.1 O que é um Agente e como Funciona?
 
 Chamamos comouma entidade capaz de perceber o ambiente em que se encontra dentro de um determinado problema informático e agir com base nas informações recebidas.
 
@@ -34,8 +33,7 @@ Se o agente não encontrar nenhuma solução possível, ele conclui que o proble
 - Por fim ao encontrar uma solução, o agente, aplicando-as ao problema para atingir o objetivo.
 
 
-
-## Estrutura de um Problema de Pesquisa
+### Estrutura de um Problema de Pesquisa
 
 Os problemas de pesquisa podem ser estruturados com base nos seguintes elementos fundamentais:
 
@@ -52,13 +50,6 @@ Os problemas de pesquisa podem ser estruturados com base nos seguintes elementos
 - : Custo de realizar uma transição de um estado para outro. Exemplo Tempo Gasto ou Memoria Utilizada
 
 Estes Elementos e Conceitos formam a base para a implementação de, utilizados por um agente para encontrar a melhor solução para um problema.
-
-
-
-
-
-
-
 
 
 ## PROJETO DE ESTUDO / PROBLEMA
