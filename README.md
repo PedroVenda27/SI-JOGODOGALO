@@ -24,9 +24,12 @@ Essa função pode ser implementada como um programa de computador, permitindo q
 Para resolver um problema, um agente inteligente segue um processo estruturado em quatro fases principais:
 
 •	Objetivo: O primeiro passo é definir claramente o objetivo que se pretende alcançar. Para isso, é necessário estabelecer quais regras e açoes podem ser tomadas para atingir esse objetivo.
+
 •	Formulação do Problema:  De seguida o agente cria uma descrição do problema, identificando os estados do Problema e defenindo as ações que podem ser realizadas de modo a definir os caminhos viáveis para atingir a solução.
+
 •	Pesquisa: Após isso o agente simula difrentes sequência de ações utlizando metodos de pesquiza em um modelo interno até encontrar um caminho que leve ao objetivo (Solução)
- Se o agente não encontrar nenhuma solução possível, ele conclui que o problema não tem resposta viável. 
+ Se o agente não encontrar nenhuma solução possível, ele conclui que o problema não tem resposta viável.
+ 
 •	Execução: Por fim ao encontrar uma solução, o agente executa as ações planejadas, aplicando-as ao problema para atingir o objetivo.
 
 
@@ -34,11 +37,16 @@ Para resolver um problema, um agente inteligente segue um processo estruturado e
 
 Os problemas de pesquisa podem ser estruturados com base nos seguintes elementos fundamentais:
 
-•	Espaço de estados: Conjunto de todos os estados possíveis do problema.
-•	Estado inicial: O Ponto de partida do Problema 
-•	Estado final: O Estado representante da Solução do problema. (Neste caso Jogo do Galo) existem varios estados Possiveis
+•	Espaço de estados: Conjunto de todos os estados possíveis do problema
+
+•	Estado inicial: O Ponto de partida do Problema.
+
+•	Estado final: O Estado representante da Solução do problema. (Neste caso Jogo do Galo) existem varios estados Possiveis.
+
 •	Função de ação: Defenição das ações disponíveis para cada estado. 
+
 •	Modelo de transição: Define o efeito de cada ação, ou seja, como a aplicação de uma ação em um estado altera a situação atual. 
+
 •	Função de custo: Custo de realizar uma transição de um estado para outro. Exemplo Tempo Gasto ou Memoria Utilizada
 
 Estes Elementos e Conceitos formam a base para a implementação de Algoritmos de Pesquisa, utilizados por um agente para  encontrar a melhor solução para um problema.
