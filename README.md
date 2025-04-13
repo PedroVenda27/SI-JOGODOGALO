@@ -182,48 +182,112 @@ https://www.youtube.com/watch?v=KU9Ch59-4vw&t=9s
 
 
 
+## 2.4 Alfa-Beta
+
+Outro Algoritmo de Pesquisa bastante utilizado é o Alfa-Beta este pode ser entendido como um algoritmo melhorado do Minimax com o objetivo de reduzir significativamente o número de nós necessario de análise na árvore de jogo, sem afetar o resultado final. 
+
+Este Algoritmo é especialmente útil em jogos com um fator de ramificação maior, onde consequentemente a análise de todas as possibilidades se torna computacionalmente dispendiosa para a utilização de um método como o MinMax
 
 
+### 2.4.1 Funcionamento do Algoritmo
 
+Relativamente ao Seu Funcionamentu o Algoritmo Alfa-Beta percorre a árvore de decisão de forma muito semelhante ao funcionamento de Min Max Utlizando na mesma uma árvore de decisão, onde cada nó representa um possível estado do jogo e cada ramo corresponde a uma jogada válida, diferenciando-se apenas pela introdução de dois parâmetros fundamentais durante a análise:
 
+•	Alfa (α): representa o valor máximo garantido para o jogador MAX até ao momento.
+•	Beta (β): representa o valor mínimo garantido para o jogador MIN até ao momento.
 
-## Alfa-Beta
+Porem à medida que os nós são avaliados, se o algoritmo detetar que uma determinada jogada não pode produzir um resultado melhor do que uma já conhecida — ou seja, se β ≤ α —, esse ramo é imediatamente descartado aumentando a velocidade de uma Jogada e reduzindo o custo computacional do metodo . Este processo é conhecido como poda, pois evita a exploração de ramos irrelevantes, reduzindo drasticamente o número de estados analisados.
 
-Outro Algoritmo de Pesquisa bastante utilizado é oeste pode ser entendido como um algoritmo melhorado do Minimax com o objetivo de reduzir significativamente o número de nós necessario de análise na árvore de jogo, sem afetar o resultado final.
+### 2.4.2 Propriedades - Complexidade e Otimidade
 
-Este Algoritmo é especialmente útil em jogos com um fator de ramificação maior, onde consequentemente a análise de todas as possibilidades se torna computacionalmente dispendiosa para a utilização de um método como o MinMax.
-
-
-
-## Funcionamento do Algoritmo
-
-Relativamente ao Seu Funcionamentu o Algoritmopercorre a árvore de decisão de forma muito semelhante ao funcionamento de Min Max Utlizando na mesma uma, onde cada nó representa um possível estado do jogo e cada ramo corresponde a uma jogada válida, diferenciando-se apenas pela introdução de dois parâmetros fundamentais durante a análise:
-
-- : representa o valor máximo garantido para o jogador MAX até ao momento.
-
-- : representa o valor mínimo garantido para o jogador MIN até ao momento.
-
-Porem à medida que os nós são avaliados, se o algoritmo detetar que uma determinada jogada— ou seja, se—, esse ramo é imediatamente descartado aumentando a velocidade de uma Jogada e reduzindo o custo computacional do metodo . Este processo é conhecido como, pois evita a exploração de ramos irrelevantes, reduzindo drasticamente o número de estados analisados.
-
-
-
-## Propriedades - Complexidade e Otimidade
-
-O algoritmoé consideradoe, uma vez que se baseia diretamente no algoritmo, que já apresenta estas propriedades. Assim, tal como no Minimax, desde que a árvore de jogo seja finita, o algoritmo Alfa-Beta garantirá a melhor jogada possível.
+O algoritmo Alfa-Beta é considerado completo e ótimo, uma vez que se baseia diretamente no algoritmo Minimax, que já apresenta estas propriedades. Assim, tal como no Minimax, desde que a árvore de jogo seja finita, o algoritmo Alfa-Beta garantirá a melhor jogada possível.
 
 Relativamente à complexidade, o algoritmo mantém os mesmos fatores que influenciam o alforitmo MinMax:
 
-- : o fator de ramificação, ou seja, o número médio de jogadas possíveis em cada estado do jogo.
+•	X: o fator de ramificação, ou seja, o número médio de jogadas possíveis em cada estado do jogo.
 
-- : a profundidade da árvore, ou seja, o número máximo de jogadas até ao fim da partida.
+•	Y: a profundidade da árvore, ou seja, o número máximo de jogadas até ao fim da partida.
 
-No entanto, ao nível da, o Alfa-Beta apresenta melhorias significativas, ao evitar a exploração de ramos irrelevantes. Isto permite otimizar o consumo de memória, uma vez que apenas é necessário armazenar os(os caminhos que se encontram em avaliação).
+No entanto, ao nível da complexidade temporal, o Alfa-Beta apresenta melhorias significativas, ao evitar a exploração de ramos irrelevantes. Isto permite otimizar o consumo de memória, uma vez que apenas é necessário armazenar os nós da fronteira de busca (os caminhos que se encontram em avaliação).
 
-Com base nestes doisfatores, a complexidade do algoritmo é dada por:
+Com base nestes dois fatores, a complexidade do algoritmo é dada por:
 
-- : O(X^Y) no pior caso (quando não ocorre poda eficaz).Ou com ordenação ideal dos nós e poda máxima, a complexidade pode ser reduzida para, representando um ganhosignificativo de desempenho face ao Minimax puro.
+•	Complexidade Temporal: O(X^Y) no pior caso (quando não ocorre poda eficaz).Ou com ordenação ideal dos nós e poda máxima, a complexidade pode ser reduzida para O(X^(Y/2)), representando um ganho significativo de desempenho face ao Minimax puro.
 
-- : O(X·Y), uma vez que o algoritmo explora a árvore em profundidade e armazena apenas os, tornando o uso de memória mais eficiente em comparação com abordagens que requerem o armazenamento de todos os nós gerados.
+•	Complexidade Espacial: O(X·Y), uma vez que o algoritmo explora a árvore em profundidade e armazena apenas os nós do caminho atual, tornando o uso de memória mais eficiente em comparação com abordagens que requerem o armazenamento de todos os nós gerados.
+
+
+### 2.4.3 Codigo
+
+```javascript
+function alphaBeta(board, depth, alpha, beta, isMaximizingPlayer) {
+  const scores = {
+    "X": -10,
+    "O": 10,
+    "tie": 0
+  };
+
+  const winner = getWinner(board);
+  if (winner) return scores[winner];
+
+  if (board.every(cell => cell !== "")) return scores["tie"];
+
+  if (isMaximizingPlayer) {
+    let maxEval = -Infinity;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = "O";
+        let evaluation = alphaBeta(board, depth + 1, alpha, beta, false);
+        board[i] = "";
+        maxEval = Math.max(maxEval, evaluation);
+        alpha = Math.max(alpha, evaluation);
+        if (beta <= alpha) break; // Poda do ramo se beta for menor ou igual a alpha.
+      }
+    }
+    return maxEval;
+  } else {
+    let minEval = Infinity;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = "X";
+        let evaluation = alphaBeta(board, depth + 1, alpha, beta, true);
+        board[i] = "";
+        minEval = Math.min(minEval, evaluation);
+        beta = Math.min(beta, evaluation);
+        if (beta <= alpha) break; // Poda do ramo.
+      }
+    }
+    return minEval;
+  }
+}
+```
+
+```javascript
+function getBestMoveAlphaBeta() {
+  let bestVal = -Infinity;
+  let bestMove = -1;
+
+  for (let i = 0; i < board.length; i++) {
+    if (board[i] === "") {
+      board[i] = "O";
+      let moveVal = alphaBeta(board, 0, -Infinity, Infinity, false);
+      board[i] = "";
+      if (moveVal > bestVal) {
+        bestVal = moveVal;
+        bestMove = i;
+      }
+    }
+  }
+  return bestMove;
+}
+```
+
+
+
+
+### 2.4.2 Propriedades - Complexidade e Otimidade
+
+
 
 
 
