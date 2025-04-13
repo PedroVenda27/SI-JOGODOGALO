@@ -70,7 +70,7 @@ Este jogo é amplamente reconhecido como um problema introdutório na área de S
 
 ## 2.2 Jogos Deterministicos
 
-### 2.2.1 O que éum Jogo Deterministico
+### 2.2.1 O que é um Jogo Deterministico
 
 É chamado um jogo determinístico um jogo em que não existe qualquer elemento de sorte ou aleatoriedade assim o resultado de cada jogada depende exclusivamente da ações tomadas pelos jogadores e do estado atual do jogo. 
 
@@ -85,57 +85,52 @@ Por esta razão, os jogos determinísticos são um bom exemplo de Estudo para Ar
 
 
 
-## MinMax
+## 2.3 Algoritmo MinMax
 
-Oé uma técnica de pesquisa amplamente utilizada em jogos de soma zero, como o. Este é particularmente relevante na área damais Especificamente naonde dois jogadores com objetivos opostos tomam decisões alternadas ao longo da partida.
+O Algoritmo Minimax é uma técnica de pesquisa amplamente utilizada em jogos de soma zero, como o Tic Tac Toe (Jogo do Galo). Este é particularmente relevante na área da Inteligência Artificial mais Especificamente na Area dos Jogos onde dois jogadores com objetivos opostos tomam decisões alternadas ao longo da partida.
 
-O algoritmo tem como objetivo encontrar a melhor jogada possível para um dos jogadores (designado por), assumindo que o adversário (designado por) também jogará de forma ótima. Dessa forma, o agente analisa todas as possíveis sequências de jogadas, simulando as decisões de ambos os jogadores, e escolhe o movimento que maximiza as suas hipóteses de vitória, mesmo perante o pior cenário.
-
-
-
-## Funcionamento do Algoritmo
+O algoritmo tem como objetivo encontrar a melhor jogada possível para um dos jogadores (designado por MAX), assumindo que o adversário (designado por MIN) também jogará de forma ótima. Dessa forma, o agente analisa todas as possíveis sequências de jogadas, simulando as decisões de ambos os jogadores, e escolhe o movimento que maximiza as suas hipóteses de vitória, mesmo perante o pior cenário.
 
 
 
-Otem por base do seu funcionamento a construção de uma, onde cada nó representa um possível estado do jogo e cada ramo corresponde a uma jogada válida. A árvore é explorada até aos(vitória, derrota ou empate), sendo esses estados avaliados por umaque atribui um valor numérico a cada resultado.
+### 2.3.1 Funcionamento do Algoritmo
+
+
+O Algoritmo Minimax tem por base do seu funcionamento a construção de uma árvore de decisão, onde cada nó representa um possível estado do jogo e cada ramo corresponde a uma jogada válida. A árvore é explorada até aos estados terminais (vitória, derrota ou empate), sendo esses estados avaliados por uma função de utilidade que atribui um valor numérico a cada resultado.
 
 A alternância entre os jogadores é representada nos níveis da árvore onde:
 
-- Osrepresentam os turnos do agente no caso a maquina, que procura maximizar o valor da jogada.
+•	Os nós MAX representam os turnos do agente no caso a maquina, que procura maximizar o valor da jogada.
 
-- Osrepresentam os turnos do adversário no caso o utilizador, que tenta minimizar esse mesmo valor.
+•	Os nós MIN representam os turnos do adversário no caso o utilizador, que tenta minimizar esse mesmo valor.
 
 O algoritmo percorre a árvore de forma recursiva, atribuindo valores aos nós com base nos resultados dos seus filhos:
 
-- Oescolhe o maior valor entre os nós seguintes.
+•	O jogador MAX escolhe o maior valor entre os nós seguintes.
 
-- Oescolhe o menor valor entre os nós.
+•	O jogador MIN escolhe o menor valor entre os nós.
 
-No final, a jogada selecionada será aquela que conduz ao, assumindo que o adversário também realiza a melhor jogada para o seu jogo
-
-
+No final, a jogada selecionada será aquela que conduz ao melhor resultado possível, assumindo que o adversário também realiza a melhor jogada para o seu jogo
 
 
+### 2.3.2 Propriedades - Complexidade e Otimidade
 
-## Propriedades - Complexidade e Otimidade
-
-
-
-O algoritmoé considerado um algoritmo, relativamente a Sua complexidade pois é garantido que encontrará uma sempre umasolução se esta existir, caso a árvore de jogo seja finita e também, desde que todas as jogadas possíveis sejam exploradas. Isso refelete-se de modo que o algoritmo fará sempre a melhor jogada possivel/ mais proxima a vitória.
+O algoritmo Minimax é considerado um algoritmo completo, relativamente a Sua complexidade pois é garantido que encontrará uma sempre uma solução se esta existir, caso a árvore de jogo seja finita e também ótimo, desde que todas as jogadas possíveis sejam exploradas. Isso refelete-se de modo que o algoritmo fará sempre a melhor jogada possivel/ mais proxima a vitória.
 
 Abordando Mais a fundo a complexidade do Algoritmo percebemos que esta se baseia em dois fatores:
 
-- : o, ou seja, o número médio de jogadas possíveis em cada estado do jogo.
+•	X: o fator de ramificação, ou seja, o número médio de jogadas possíveis em cada estado do jogo.
 
-- : a, ou seja, o número máximo de jogadas até ao fim da partida.
+•	Y: a profundidade da árvore, ou seja, o número máximo de jogadas até ao fim da partida.
 
 Com base Nestes dois a complexidade temporal e espacial do algoritmo é dada por:
 
-- : O(X^Y), pois o algoritmo precisa de explorar todos os nós até à profundidade máxima.
+•	Complexidade Temporal: O(X^Y), pois o algoritmo precisa de explorar todos os nós até à profundidade máxima.
 
-- : O(X*Y), no caso de umaimplementação recursiva em profundidade.
+•	Complexidade Espacial: O(X*Y), no caso de uma implementação recursiva em profundidade.
 
-Apesar de ser eficiente em jogos simples como o Tic Tac Toe, o algoritmo Minimax torna-se rapidamenteem jogos com árvores de decisão muito grandes devido ao facto de necessitar de explorar a Arvore de Decisão na sua Totalidade. Por isso, nesses Casos é comum utilizar outros Algorimos como os que iremos Ver a Seguir ( Alfa-Beta ), que permitem eliminar ramos da árvore que não influenciam a decisão final, reduzindo o tempo de execução sem comprometer a exatidão do resultado.
+Apesar de ser eficiente em jogos simples como o Tic Tac Toe, o algoritmo Minimax torna-se rapidamente computacionalmente inviável em jogos com árvores de decisão muito grandes devido ao facto de necessitar de explorar a Arvore de Decisão na sua Totalidade. Por isso, nesses Casos é comum utilizar outros Algorimos como os que iremos Ver a Seguir ( Alfa-Beta ), que permitem eliminar ramos da árvore que não influenciam a decisão final, reduzindo o tempo de execução sem comprometer a exatidão do resultado.
+
 
 
 
