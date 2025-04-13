@@ -1,5 +1,3 @@
-'''
-
 # 1. INTRODUÇÃO
 
 Nos últimos anos, a Inteligência Artificial (IA) tem se tornado cada vez mais presente em diversas áreas, desde assistentes virtuais até sistemas complexos de automação e otimização. Os Sistemas Inteligentes são projetados para tomar decisões e resolver problemas de forma autônoma, muitas vezes simulando o pensamento humano.
@@ -55,7 +53,6 @@ Estes Elementos e Conceitos formam a base para a implementação de Algoritmos d
 NOTA: Esta Parte do Relatório é Bastante Semelhante a do Relatorio Anterior uma vez que se tratam de Conceitos Basicos e Introdutórios da Disciplina
 
 
-
 # 2 PROJETO DE ESTUDO / PROBLEMA
 
 ## 2.1 Jogo do Galo Tic-Tac-Toe
@@ -65,8 +62,6 @@ NOTA: Esta Parte do Relatório é Bastante Semelhante a do Relatorio Anterior um
 O Jogo do Galo, também conhecido como Tic Tac Toe, é um jogo clássico que consiste num tabuleiro 3x3, onde dois jogadores alternam jogadas para preencher as casas com os símbolos "X" e "O". O objetivo é formar uma linha com três símbolos iguais na horizontal, vertical ou diagonal antes do adversário.
 
 Este jogo é amplamente reconhecido como um problema introdutório na área de Sistemas Inteligentes e Inteligência Artificial (IA), sendo frequentemente utilizado para demonstrar o funcionamento de agentes capazes de tomar decisões estratégicas. Para isso, são exploradas técnicas de pesquisa e algoritmos de decisão, permitindo que o agente escolha a melhor jogada possível em cada turno. Neste contexto, serão implementados e comparados os Algoritmos Minimax, Alfa-Beta e Monte Carlo, avaliando o seu desempenho e capacidade de tomada de decisão em diferentes cenários do jogo.
-
-
 
 
 ## 2.2 Jogos Deterministicos
@@ -82,17 +77,11 @@ Estes jogos são, geralmente, de informação perfeita, o que significa que todo
 Por esta razão, os jogos determinísticos são um bom exemplo de Estudo para Areas como Inteligência Artificial, pois permitem testar algoritmose metodos de pesquisa.
 
 
-
-
-
-
 ## 2.3 Algoritmo MinMax
 
 O Algoritmo Minimax é uma técnica de pesquisa amplamente utilizada em jogos de soma zero, como o Tic Tac Toe (Jogo do Galo). Este é particularmente relevante na área da Inteligência Artificial mais Especificamente na Area dos Jogos onde dois jogadores com objetivos opostos tomam decisões alternadas ao longo da partida.
 
 O algoritmo tem como objetivo encontrar a melhor jogada possível para um dos jogadores (designado por MAX), assumindo que o adversário (designado por MIN) também jogará de forma ótima. Dessa forma, o agente analisa todas as possíveis sequências de jogadas, simulando as decisões de ambos os jogadores, e escolhe o movimento que maximiza as suas hipóteses de vitória, mesmo perante o pior cenário.
-
-
 
 ### 2.3.1 Funcionamento do Algoritmo
 
@@ -132,7 +121,7 @@ Com base Nestes dois a complexidade temporal e espacial do algoritmo é dada por
 
 Apesar de ser eficiente em jogos simples como o Tic Tac Toe, o algoritmo Minimax torna-se rapidamente computacionalmente inviável em jogos com árvores de decisão muito grandes devido ao facto de necessitar de explorar a Arvore de Decisão na sua Totalidade. Por isso, nesses Casos é comum utilizar outros Algorimos como os que iremos Ver a Seguir ( Alfa-Beta ), que permitem eliminar ramos da árvore que não influenciam a decisão final, reduzindo o tempo de execução sem comprometer a exatidão do resultado.
 
-## 2.3.3 Codigo
+### 2.3.3 Codigo
 
 ```javascript
 function minimax(board, depth, isMaximizingPlayer) {
@@ -175,14 +164,14 @@ function minimax(board, depth, isMaximizingPlayer) {
 }
 ```
 
-## 2.3.3 Exemplo Prático
+### 2.3.3 Exemplo Prático
 
 De forma A entender tudo isto de uma Maneira mais vizual deixo aqui um video de toda a explicação do Funcionamento do Algoritmo MinMax bem como o Funcionamento da Árvore de Decisão do mesmo
 https://www.youtube.com/watch?v=KU9Ch59-4vw&t=9s
 
 
 
-## 2.4 Alfa-Beta
+## 2.4 Algoritmo Alfa-Beta
 
 Outro Algoritmo de Pesquisa bastante utilizado é o Alfa-Beta este pode ser entendido como um algoritmo melhorado do Minimax com o objetivo de reduzir significativamente o número de nós necessario de análise na árvore de jogo, sem afetar o resultado final. 
 
@@ -282,98 +271,88 @@ function getBestMoveAlphaBeta() {
 }
 ```
 
+### Exemplo Prático
+
+Novamente de forma a entender tudo isto de uma Maneira mais vizual deixo aqui uma video do funcionamento do método Alfa-Beta 
+https://www.youtube.com/watch?v=9D1hVGumxCo&t=14s
 
 
+## 2.5 Algoritmo Monte Carlo (EXTRA)
 
-### 2.4.2 Propriedades - Complexidade e Otimidade
+O Monte Carlo Tree Search (MCTS) é um algoritmo de tomada de decisão baseado em simulações aleatórias, geralmente utilizado em jogos e problemas. Ao contrário dos algoritmos anteriores (Minimax e Afa-Beta), o Algoritmo Monte Carlo não exige a análise exaustiva de todos os ramos da árvore, utilizando em vez disso amostragens estatísticas para estimar a melhor jogada possível.
 
+## 2.5.1 Funcionamento do Algoritmo
 
+Já no seu Funcionamento o algoritmo Monte Carlo constrói a árvore de decisão de forma incremental, explorando apenas as partes mais promissoras com base em simulações aleatórias. Cada iteração do algoritmo é composta por quatro fases principais:
 
-
-
-## Exemplo Prático
-
-Novamente de forma a entender tudo isto de uma Maneira mais vizual deixo aqui uma video do funcionamento do método Alfa-Beta
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Monte Carlo (EXTRA)
-
-
-
-
-
-## Funcionamento do Algoritmo
-
-Já no seu Funcionamento o algoritmo Monte Carlo constrói a árvore de decisão de forma, explorando apenas as partes mais promissoras com base em simulações aleatórias. Cada iteração do algoritmo é composta por quatro fases principais:
-
-- : a partir da raiz, o algoritmo seleciona sucessivamente os ramos mais promissores com base num critério (ex., uma fórmula que baseia exploração de novas jogadas com a exploração das jogadas que já deram bons resultados).
-
-- : quando atinge um nó ainda não completamente explorado, expande a árvore adicionando um novo nó filho.
-
-- : a partir do novo nó, o algoritmo simula uma partida completa de forma aleatória até ao fim do jogo.
-
-- : os resultados da simulação são propagados de volta até à raiz, atualizando as estatísticas de cada nó (número de visitas e pontuação).
+1.	Seleção: a partir da raiz, o algoritmo seleciona sucessivamente os ramos mais promissores com base num critério (ex. UCB1 – Upper Confidence Bound, uma fórmula que baseia exploração de novas jogadas com a exploração das jogadas que já deram bons resultados).
+   
+2.	Expansão: quando atinge um nó ainda não completamente explorado, expande a árvore adicionando um novo nó filho.
+   
+3.	Simulação (ou Playout): a partir do novo nó, o algoritmo simula uma partida completa de forma aleatória até ao fim do jogo.
+   
+4.	Retropropagação: os resultados da simulação são propagados de volta até à raiz, atualizando as estatísticas de cada nó (número de visitas e pontuação).
 
 Com várias iterações, a árvore vai-se concentrando nas jogadas com maior probabilidade de sucesso, melhorando a qualidade das decisões.
 
+### 2.5.2 Propriedades - Complexidade e Otimidade
 
-
-## Propriedades - Complexidade e Otimidade
-
-Devido ao facto de ser um algoritmo baseado em, o MCTSno sentido clássico, pois. No entanto,, o algoritmo tende a, tornando-se cada vez mais eficaz e confiável na escolha das jogadas.
+Devido ao facto de ser um algoritmo baseado em estatísticas e simulações aleatórias, o MCTS não é considerado completo nem ótimo no sentido clássico, pois não garante encontrar a jogada perfeita. No entanto, à medida que o número de iterações aumenta, o algoritmo tende a aproximar-se progressivamente de soluções ótimas, tornando-se cada vez mais eficaz e confiável na escolha das jogadas.
 
 Abordando Mais a fundo a complexidade do Algoritmo percebemos que esta se baseia em dois fatores:
 
-- : o número de simulações realizadas por jogada.
+•	N: o número de simulações realizadas por jogada.
 
-- : o tempo disponível para calcular a jogada.
+•	T: o tempo disponível para calcular a jogada.
 
 Com base nisso, temos:
 
-- : O(N·T), pois o desempenho depende diretamente do número de simulações feitas dentro do tempo permitido.
+•	Complexidade Temporal: O(N·T), pois o desempenho depende diretamente do número de simulações feitas dentro do tempo permitido.
 
-- : depende da profundidade e do número de nós expandidos, sendo geralmente inferior ao Minimax, já que apenas partes da árvore são realmente exploradas.
+•	ComplexidadeEspacial: depende da profundidade e do número de nós expandidos, sendo geralmente inferior ao Minimax, já que apenas partes da árvore são realmente exploradas.
 
-A grande vantagem do MCTS está na sua, funcionando bem em jogos com grandes espaços de estados e sem exigir uma função de avaliação específica — apenas um modelo de simulação.
+A grande vantagem do MCTS está na sua escalabilidade, funcionando bem em jogos com grandes espaços de estados e sem exigir uma função de avaliação específica — apenas um modelo de simulação.
+
+### 2.5.3 Codigo
+
+```javascript
+function monteCarloMove(simulations = 100) {
+  const emptyIndices = board
+    .map((val, idx) => (val === "" ? idx : null))
+    .filter(idx => idx !== null);
+  let bestMove = -1;
+  let bestWinRate = -1;
+
+  for (let move of emptyIndices) {
+    let wins = 0;
+
+    for (let i = 0; i < simulations; i++) {
+      let tempBoard = [...board];
+      tempBoard[move] = "O";
+      let result = simulateRandomGame(tempBoard, "X");
+      if (result === "O") wins++;
+    }
+
+    const winRate = wins / simulations;
+
+    if (winRate > bestWinRate) {
+      bestWinRate = winRate;
+      bestMove = move;
+    }
+  }
+  return bestMove;
+}
+```
 
 
+### 2.5.4 Exemplo Prático
 
-## Exemplo Prático
+Novamente de forma a entender tudo isto de uma Maneira mais vizual deixo aqui uma video do funcionamento do método Monte Carlo 
 
-Novamente de forma a entender tudo isto de uma Maneira mais vizual deixo aqui uma video do funcionamento do método Monte Carlo
-
-
-
+https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
 
 
-
-
-
-
-## TESTES ESTUDO DE TEMPOS E MEMORIA
+# 3 TESTES ESTUDO DE TEMPOS E MEMORIA
 
 ## 
 
