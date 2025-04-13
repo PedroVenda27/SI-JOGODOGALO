@@ -7,7 +7,10 @@ Neste relatório, vamos explorar os conceitos fundamentais de IA e Sistemas Inte
 Ao longo do relatório, discutiremos temas como Conceitos Base da Area Algoritmos de Busca e estratégias de solução podem ser aplicados ao Jogo do Galo, ilustrando o funcionamento de técnicas fundamentais da IA. Além disso, analisaremos os desafios e a eficiência de diferentes abordagens para encontrar a solução ideal.
 
 
+
+
 ## 1.1 Conceitos Base
+
 
 ### 1.1.1 O que é um Agente e como Funciona?
 
@@ -53,15 +56,23 @@ Estes Elementos e Conceitos formam a base para a implementação de Algoritmos d
 NOTA: Esta Parte do Relatório é Bastante Semelhante a do Relatorio Anterior uma vez que se tratam de Conceitos Basicos e Introdutórios da Disciplina
 
 
+
+
 # 2 PROJETO DE ESTUDO / PROBLEMA
 
+
+
+
 ## 2.1 Jogo do Galo Tic-Tac-Toe
+
 
 ### 2.1.1 O que é e em Consiste
 
 O Jogo do Galo, também conhecido como Tic Tac Toe, é um jogo clássico que consiste num tabuleiro 3x3, onde dois jogadores alternam jogadas para preencher as casas com os símbolos "X" e "O". O objetivo é formar uma linha com três símbolos iguais na horizontal, vertical ou diagonal antes do adversário.
 
 Este jogo é amplamente reconhecido como um problema introdutório na área de Sistemas Inteligentes e Inteligência Artificial (IA), sendo frequentemente utilizado para demonstrar o funcionamento de agentes capazes de tomar decisões estratégicas. Para isso, são exploradas técnicas de pesquisa e algoritmos de decisão, permitindo que o agente escolha a melhor jogada possível em cada turno. Neste contexto, serão implementados e comparados os Algoritmos Minimax, Alfa-Beta e Monte Carlo, avaliando o seu desempenho e capacidade de tomada de decisão em diferentes cenários do jogo.
+
+
 
 
 ## 2.2 Jogos Deterministicos
