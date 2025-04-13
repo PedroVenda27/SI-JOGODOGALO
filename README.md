@@ -355,7 +355,8 @@ https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
 
 # 3 TESTES ESTUDO DE TEMPOS E MEMORIA
 
-## 3.1INDICAÇOES DE TESTES / RESULTADOS ESPERADOS
+## 3.1 INDICAÇOES DE TESTES / RESULTADOS ESPERADOS
+
 ALFA BETA (Melhor das hipoteses Empate)
 MIN MAX (Melhor das hipoteses Empate)
 Alfa e Beta devem Realizar os dois a mesma jogada u ma vez que realiuzam a melhor jogada
@@ -386,15 +387,14 @@ MONTE CARLO (MPossivel Vitoria)
 [Estado Final](https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MINMAX_T1_FINAL.png?raw=true)
 
 
-
 ## 3.3 Jogo-Teste1 (ALFA BETA)
 
 | JOGADA   | Tempo JOGADA | Tempo TOTAL | Memoria JOGADA | Memoria TOTAL |
 |----------|---------------|--------------|----------------|----------------|
-| <span style="color:red">**JOGADA1**</span> | 1.10ms        | 1.10ms       | 9.54MB         | 9.54MB         |
-| <span style="color:green">**JOGADA2**</span> | 0.10ms        | 1.20ms       | 9.54MB         | 19.07MB        |
-| <span style="color:blue">**JOGADA3**</span> | 0.00ms        | 1.20ms       | 9.54MB         | 28.61MB        |
-| <span style="color:red">**JOGADA4**</span> | 0.00ms        | 1.20ms       | 9.54MB         | 38.15MB        |
+| <span style="color:red">**JOGADA1**</span> | 1.50ms        | 1.50ms       | 9.54MB         | 9.54MB         |
+| <span style="color:green">**JOGADA2**</span> | 0.00ms        | 1.50ms       | 9.54MB         | 19.07MB        |
+| <span style="color:blue">**JOGADA3**</span> | 0.00ms        | 1.50ms       | 9.54MB         | 28.61MB        |
+| <span style="color:red">**JOGADA4**</span> | 0.00ms        | 1.50ms       | 9.54MB         | 38.15MB        |
 
 
 ### Jogada 1
@@ -412,6 +412,8 @@ MONTE CARLO (MPossivel Vitoria)
 ### Estado Final
 [Estado Final](https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/ALFABETA_T1_FINAL.png?raw=true)
 
+
+
 ### 3.4 Jogo-Teste (MONTE CARLO)
 
 | JOGADA   | Tempo JOGADA | Tempo TOTAL | Memoria JOGADA | Memoria TOTAL |
@@ -422,7 +424,13 @@ MONTE CARLO (MPossivel Vitoria)
 | <span style="color:red">**JOGADA4**</span> | --------       | 5.50ms       | ----------      | 28.61MB        |
 
 
-# ANALISE DOS RESULTADOS 
+# ANALISE DOS RESULTADOS E RESULTADOS ESPERADOS CONFIRMAÇOES
+
+MINMAX (Melhor das hipoteses Empate, impossivel ganhar) ✅ Confirmado!
+ALFA BETA (Melhor das hipoteses Empate, impossivel ganhar) ✅ Confirmado!
+ALFA-BETA e MINMAX devem Realizar os dois a mesma jogada uma vez que realiuzam a melhor jogada ✅ Confirmado! a
+
+
 
 ## Estudo de Tempos de Execução (Base nos Dados Obtidos)
 
