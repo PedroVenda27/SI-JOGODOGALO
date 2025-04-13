@@ -58,23 +58,27 @@ Estes Elementos e Conceitos formam a base para a implementação de, utilizados 
 
 ### 2.1.1 O que é e em Consiste
 
-O, também conhecido como, é um jogoclássico que consiste num tabuleiro 3x3, onde dois jogadores alternam jogadas para preencher as casas com os símbolos "X" e "O". O objetivo é formar uma linha com três símbolos iguais na horizontal, vertical ou diagonal antes do adversário.
+O Jogo do Galo, também conhecido como Tic Tac Toe, é um jogo clássico que consiste num tabuleiro 3x3, onde dois jogadores alternam jogadas para preencher as casas com os símbolos "X" e "O". O objetivo é formar uma linha com três símbolos iguais na horizontal, vertical ou diagonal antes do adversário.
 
-Este jogo é amplamente reconhecido como um problema introdutório na área de, sendo frequentemente utilizado para demonstrar o funcionamento de agentes capazes de tomar decisões estratégicas. Para isso, são exploradas técnicas de pesquisa e algoritmos de decisão, permitindo que o agente escolha a melhor jogada possível em cada turno. Neste contexto, serão implementados e comparados os Algoritmos,e Monte Carlo, avaliando o seu desempenho e capacidade de tomada de decisão em diferentes cenários do jogo.
-
-
-
-## Jogos Deterministicos
-
-## O que éum Jogo Deterministico
+Este jogo é amplamente reconhecido como um problema introdutório na área de Sistemas Inteligentes e Inteligência Artificial (IA), sendo frequentemente utilizado para demonstrar o funcionamento de agentes capazes de tomar decisões estratégicas. Para isso, são exploradas técnicas de pesquisa e algoritmos de decisão, permitindo que o agente escolha a melhor jogada possível em cada turno. Neste contexto, serão implementados e comparados os Algoritmos Minimax, Alfa-Beta e Monte Carlo, avaliando o seu desempenho e capacidade de tomada de decisão em diferentes cenários do jogo.
 
 
+
+
+## 2.2 Jogos Deterministicos
+
+### 2.2.1 O que éum Jogo Deterministico
+
+É chamado um jogo determinístico um jogo em que não existe qualquer elemento de sorte ou aleatoriedade assim o resultado de cada jogada depende exclusivamente da ações tomadas pelos jogadores e do estado atual do jogo. 
 
 Geralmente neste tipo de Jogos as regras são fixas e completamente conhecidas por ambos os participantes, e não há qualquer fator externo que possa alterar o curso da partida. Assim, se o jogo for repetido nas mesmas condições e com as mesmas decisões, o desfecho será sempre o mesmo.
 
-
+Estes jogos são, geralmente, de informação perfeita, o que significa que todos os jogadores têm total conhecimento do estado atual do jogo em todos os momentos. Isso permite uma análise lógica e estratégica rigorosa, uma vez que é possível prever todas as jogadas possíveis e as suas consequências futuras. 
 
 Por esta razão, os jogos determinísticos são um bom exemplo de Estudo para Areas como Inteligência Artificial, pois permitem testar algoritmose metodos de pesquisa.
+
+
+
 
 
 
