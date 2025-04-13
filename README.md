@@ -1,5 +1,5 @@
 
-## INTRODUÇÃO
+## 1. INTRODUÇÃO
 
 Nos últimos anos, a Inteligência Artificial (IA) tem se tornado cada vez mais presente em diversas áreas, desde assistentes virtuais até sistemas complexos de automação e otimização. Ossão projetados para tomar decisões e resolver problemas de forma autônoma, muitas vezes simulando o pensamento humano.
 
@@ -9,9 +9,9 @@ Ao longo do relatório, discutiremos temas como Conceitos Base da Area Algoritmo
 
 
 
-## Conceitos Base
+### 1.1 Conceitos Base
 
-## O que é um Agente e como Funciona?
+#### 1.1.1 O que é um Agente e como Funciona?
 
 Chamamos comouma entidade capaz de perceber o ambiente em que se encontra dentro de um determinado problema informático e agir com base nas informações recebidas.
 
