@@ -364,6 +364,12 @@ https://www.youtube.com/watch?v=hhBNk0xmZ9U&t=43s
 | <span style="color:blue">**JOGADA3**</span> | 0.00ms           | 11.00ms          | 9.54MB             | 28.61MB            |
 | <span style="color:red">**JOGADA4**</span> | 0.00ms           | 11.00ms           | 9.54MB             | 28.61MB            |
 
+https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MINMAX_T1_JOG1.png
+https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MINMAX_T1_JOG2.png
+https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MINMAX_T1_JOG3.png
+https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MINMAX_T1_JOG4.png
+https://github.com/PedroVenda27/SI-JOGODOGALO/blob/main/img/MINMAX_T1_FINAL.png
+
 
 
 
