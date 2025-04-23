@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+  
+  <!-- Opções para escolher o modo de jogo -->
+  <div>
+    <label><strong>Escolha o modo de jogo:</strong></label><br>
+    <button onclick="selectGameMode('single-minimax')">1 Jogador (Minimax)</button>
+    <button onclick="selectGameMode('single-montecarlo')">1 Jogador (Monte Carlo)</button>
+    <button onclick="selectGameMode('single-alphabeta')">1 Jogador (Alpha-Beta)</button>
+    <button onclick="selectGameMode('multi')">2 Jogadores</button>
+  </div>
+  
+  <div class="scoreboard">
+    <p><strong>Jogador X:</strong> <span id="score-x">0</span></p>
+    <p><strong>Jogador O:</strong> <span id="score-o">0</span></p>
+  </div>
+  
+  <div class="board-container">
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+  </div>
+  
+  <p id="status">Escolha o modo de jogo</p>
+  <p id="performance">Desempenho da IA aparecerá aqui</p>
+  
+  <button onclick="resetGame()">Reiniciar Jogo</button>
+  <button onclick="resetScore()">Reiniciar Placar</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

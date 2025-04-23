@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f2f2f2;
+  }
+  
+  .scoreboard {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  .board-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #board {
+    position: relative;
+    display: grid; /* Adicionado para configurar como um grid */
+    grid-template-columns: repeat(3, 100px); /* Configura 3 colunas */
+    gap: 5px; /* Espaçamento entre as células */
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 2px solid #333;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cell:hover {
+    background: #eee;
+  }
+  
+  /* Destaque para as células vencedoras */
+  .winner {
+    background-color: lightgreen; /* Cor de fundo quando a célula for parte da vitória */
+    color: #333; /* Cor do texto */
+  }
+  
